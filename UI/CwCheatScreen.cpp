@@ -227,7 +227,7 @@ UI::EventReturn CwCheatScreen::OnImportCheat(UI::EventParams &params) {
 					continue;
 				}
 			loop:;
-			} while (line.substr(0, 2) != "_S");
+			} while (fs.good() && line.substr(0, 2) != "_S");
 			finished = true;
 		}
 		if (finished == true)
